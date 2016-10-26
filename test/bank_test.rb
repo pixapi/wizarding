@@ -84,9 +84,9 @@ class BankTest < Minitest::Test
   def test_it_cannot_transfer_money_to_bank_if_not_a_client
     person = Person.new("Luna", 500)
     chase = Bank.new("Chase")
-    amount = 250
+    amount = 100
 
-    assert_equal "Luna does not have an account with Wells Fargo.", chase.transfer(person, "Wells Fargo", 250)
+    assert_equal "Luna does not have an account with Wells Fargo.", chase.transfer(person, "Wells Fargo", 100)
   end
 
   def test_it_can_know_balance_account
